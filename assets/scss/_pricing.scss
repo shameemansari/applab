@@ -1,0 +1,59 @@
+.pricing {
+  min-height: 100vh;
+  padding: 50px 0;
+
+  &-title {
+    padding: 0 300px;
+    text-align: center;
+    @include laptop {
+      padding: 0 30px;
+    }
+    h1 {
+      color: $title-color;
+      font-size: size(xl);
+      font-weight: 600;
+    }
+    p {
+      margin: 20px 0;
+      font-size: size(xs);
+      font-weight: 500;
+      color: $grey-2;
+    }
+  }
+  .nav {
+    &-pills {
+      justify-content: center;
+      //   background-color: pink;
+      width: 190px;
+      padding: 3px 0;
+      margin: 0 auto;
+      border-radius: 50px;
+      border: 1px solid rgba($grey-2, 0.5);
+      a {
+        color: $grey-2;
+        font-size: size(xs);
+      }
+    }
+  }
+  .tab-pane {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    .card {
+      width: 250px;
+    }
+  }
+}
+
+.nav-pills .nav-link {
+  border-radius: 4rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: $blue;
+}

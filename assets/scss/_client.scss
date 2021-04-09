@@ -1,0 +1,118 @@
+.client {
+  min-height: 50vh;
+  padding: 30px 0;
+  @include mobile {
+    padding: 30px 0 0;
+  }
+  &-detail {
+    margin: 0 10px;
+    padding: 20px 10px;
+    h1 {
+      color: $title-color;
+      font-weight: 600;
+      font-size: size(xl);
+      @include mobile {
+        font-size: size(md) + 0.1rem;
+      }
+    }
+    p {
+      font-size: size(xs);
+      font-weight: 400;
+      color: $grey-2;
+    }
+    .stars {
+      margin: 10px 0 20px;
+      i {
+        color: $orange;
+        font-size: size(sm);
+        margin: 0 5px;
+      }
+    }
+    h2 {
+      font-size: size(md) + 0.1rem;
+      font-weight: 600;
+      margin: 20px 0;
+      color: $title-color;
+    }
+  }
+
+  .swiper {
+    &-wrapper {
+      .swiper-slide {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
+        }
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+        }
+        .client-name {
+          margin: 0 10px;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: left;
+          @include mobile {
+            height: 110px;
+          }
+          h6 {
+            font-size: size(sm);
+            font-weight: 600;
+            margin: 0 0 5px 0;
+          }
+          p {
+            font-weight: 500;
+            font-size: size(xs);
+            color: $grey-3;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &-button-prev,
+    &-button-next {
+      height: 40px;
+      width: 40px;
+      top: inherit;
+      bottom: 25px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($grey-1, 0.2);
+      @include mobile {
+        bottom: 0;
+      }
+      &::after {
+        display: none;
+      }
+      .fas {
+        color: $title-icon-blue;
+        font-size: size(sm);
+      }
+    }
+
+    &-button-prev {
+      left: 80%;
+      transform: translateX(-50%);
+      @include mobile {
+        left: 40%;
+        transform: translateX(-65%);
+      }
+    }
+    &-button-next {
+      right: 3%;
+      @include mobile {
+        right: 30%;
+      }
+    }
+  }
+}

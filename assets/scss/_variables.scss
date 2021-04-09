@@ -1,0 +1,54 @@
+// Variables
+
+$orange: #fcae61; //App Lab
+$blue: #2500f9; //Buttons
+$white: #fff;
+$black: #000;
+$title-color: #242f51; //Headings
+$title-icon-pink: #f55767;
+$title-icon-blue: #2563ff;
+$title-icon-green: #40975f;
+$grey-1: #d7d8d9;
+$grey-2: #b0b1b3;
+$grey-3: #616368;
+$footer-color: #09142e;
+
+// Normal Text , Pricing grey text: Poppins regular
+// Heading Text : Poppins Semi Bold
+// Icon Heading Text, Pricing Dollar : Poppins Semi Bold
+// Button Text : Poppins Bold
+$font-size: (
+  'xxl': 3.2rem,
+  'xl': 2.2rem,
+  'lg': 1.6rem,
+  'md': 1.2rem,
+  'sm': 1rem,
+  'xs': 0.85rem,
+);
+
+@function size($size) {
+  @return map-get($font-size, $size);
+}
+
+// Mixins
+$mobile: 426px;
+$tablet: 769px;
+$laptop: 1025px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}

@@ -1,0 +1,32 @@
+.company {
+  min-height: 50vh;
+  width: 100%;
+  padding: 80px 0px 50px;
+  overflow-x: hidden;
+  p {
+    text-align: center;
+    font-size: size(sm);
+    font-weight: 600;
+    color: $grey-3;
+  }
+  &-image {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    justify-items: center;
+    align-items: center;
+    @include tablet {
+      grid-template-columns: repeat(3, minmax(170px, 1fr));
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, minmax(170px, 1fr));
+    }
+    img {
+      margin: 20px 0px;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      object-fit: contain;
+    }
+  }
+}

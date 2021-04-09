@@ -1,0 +1,208 @@
+.navbar {
+  &-brand {
+    font-size: size(xl);
+    font-weight: 700;
+    span {
+      color: $orange;
+    }
+  }
+  &-toggler {
+    border: none;
+    span {
+      color: $black;
+      font-size: size(lg);
+    }
+  }
+}
+.nav {
+  &-item {
+    margin: 0 10px;
+  }
+  &-link {
+    font-size: size(xs);
+    color: $grey-3;
+    font-weight: 600;
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // Hero Town Background
+  &-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  //   Decorate
+  .item {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    z-index: 0;
+    &-1 {
+      border: 5px solid $title-icon-pink;
+      top: 11%;
+      right: 35%;
+    }
+    &-2 {
+      border: 6px solid $grey-1;
+      top: 20%;
+      left: 10%;
+    }
+    &-3 {
+      border: 5px solid $title-icon-pink;
+      bottom: 10%;
+      left: 22.5%;
+    }
+    &-4 {
+      border: 5px solid $title-icon-pink;
+      bottom: 7%;
+      right: 6%;
+    }
+    &-5 {
+      border-radius: 0%;
+      border: 3px solid $grey-1;
+      top: 30%;
+      left: 30%;
+      transform: rotate(45deg);
+    }
+    &-6 {
+      font-size: 0.9rem;
+      color: $grey-1;
+      bottom: 15%;
+      left: 10px;
+      transform: rotate(50deg);
+    }
+    &-7 {
+      font-size: 0.9rem;
+      color: $grey-2;
+      bottom: 25%;
+      left: 49%;
+      transform: rotate(50deg);
+    }
+    &-8 {
+      font-size: 0.9rem;
+      color: $blue;
+      bottom: 4%;
+      left: 41%;
+    }
+  }
+
+  &-wrapper {
+    width: 100%;
+    .row {
+      & > div {
+        z-index: 2;
+      }
+    }
+    .content {
+      padding-top: 80px;
+      &-left {
+        padding: 30px 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main {
+          &-badge {
+            height: 30px;
+            width: auto;
+            max-width: 60%;
+            position: relative;
+            border-radius: 30px;
+            background-color: $grey-1;
+            @include laptop {
+              max-width: 75%;
+            }
+            @include mobile {
+              max-width: 90%;
+            }
+            img {
+              position: absolute;
+              height: 30px;
+              width: 30px;
+              background-color: $orange;
+              padding: 7px;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              border-radius: 50%;
+            }
+            p {
+              position: absolute;
+              font-size: size(xs);
+              top: 50%;
+              left: 40px;
+              transform: translateY(-50%);
+              @include tablet {
+                font-size: size(xs);
+              }
+            }
+          }
+          &-heading {
+            h1 {
+              font-size: size(xxl);
+              font-weight: 700;
+              color: $title-color;
+              margin: 10px 0;
+              @include mobile {
+                font-size: size(xl);
+              }
+            }
+            p {
+              font-size: size(xs);
+              color: $grey-2;
+              font-weight: 500;
+              margin: 0 0 30px;
+            }
+          }
+          &-btn {
+            display: flex;
+            @include mobile {
+              flex-direction: column;
+            }
+            a {
+              margin: 5px;
+              &:nth-child(2) {
+                background-color: transparent;
+                color: $blue;
+                font-weight: 600;
+              }
+              @include mobile {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          }
+        }
+      }
+      &-right {
+        .hero-image {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            max-width: 65.5%;
+            height: auto;
+            object-fit: contain;
+            @include tablet {
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

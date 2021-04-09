@@ -1,0 +1,117 @@
+.features {
+  min-height: 50vh;
+  width: 100%;
+  .row {
+    height: 100%;
+  }
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 90%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &-content {
+    margin: auto;
+    padding: 0 10px;
+    h2 {
+      font-size: size(xl) + 0.6rem;
+      color: $title-color;
+      font-weight: 700;
+      @include mobile {
+        font-size: size(lg) + 0.4rem;
+      }
+    }
+    p {
+      font-size: size(xs);
+      color: $grey-3;
+      font-weight: 500;
+    }
+  }
+}
+
+.jackpot {
+  h1 {
+    font-weight: 600;
+    color: $title-color;
+    padding: 10px;
+    font-size: size(xl);
+    @include mobile {
+      font-size: size(md) + 0.4rem;
+    }
+  }
+  p {
+    text-align: left;
+    padding: 0 20px 0 0;
+    color: $grey-2;
+    font-size: size(xs);
+    font-weight: 600;
+    @include mobile {
+      padding: 0 10px;
+    }
+  }
+  .line {
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background-color: rgba($grey-3, 0.5);
+    }
+  }
+}
+
+.design {
+  min-height: 50vh;
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 100%;
+      height: auto;
+      padding: 10px;
+      object-fit: contain;
+    }
+  }
+  &-detail {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+      width: 80%;
+      margin: 0 auto;
+      @include tablet {
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        font-weight: 600;
+        overflow: hidden;
+        font-size: size(xl);
+        color: $title-color;
+        margin: 20px 0 10px;
+        @include mobile {
+          font-size: size(lg);
+        }
+      }
+      p {
+        font-weight: 600;
+        font-size: size(xs);
+        color: $grey-2;
+        margin: 20px 0;
+        @include mobile {
+          font-size: size(xs);
+        }
+      }
+    }
+  }
+}
