@@ -908,7 +908,6 @@ a:hover {
 }
 
 .pricing .tab-pane {
-  min-height: 70vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
