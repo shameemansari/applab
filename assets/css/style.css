@@ -134,6 +134,11 @@ a:hover {
   color: #40975f;
 }
 
+.navbar {
+  -webkit-box-shadow: 0 -2px 10px 2px rgba(176, 177, 179, 0.2);
+          box-shadow: 0 -2px 10px 2px rgba(176, 177, 179, 0.2);
+}
+
 .navbar-brand {
   font-size: 2.2rem;
   font-weight: 700;
@@ -266,7 +271,7 @@ a:hover {
 }
 
 .hero-wrapper .content-left {
-  padding: 30px 30px 0;
+  padding: 35px 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,7 +869,13 @@ a:hover {
 
 .pricing {
   min-height: 100vh;
-  padding: 50px 0;
+  padding: 50px 0 30px;
+}
+
+@media screen and (max-width: 769px) {
+  .pricing {
+    padding: 30px 0;
+  }
 }
 
 .pricing-title {
@@ -895,7 +906,7 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 190px;
+  width: 195px;
   padding: 3px 0;
   margin: 0 auto;
   border-radius: 50px;
@@ -908,7 +919,12 @@ a:hover {
 }
 
 .pricing .tab-pane {
+  padding: 20px 0;
   width: 100%;
+  display: none;
+}
+
+.pricing .tab-pane.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -918,11 +934,60 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: pink;
 }
 
 .pricing .tab-pane .card {
-  width: 250px;
+  border-radius: 6px;
+  min-width: 220px;
+  height: 400px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.pricing .tab-pane .card-header {
+  border: none;
+  background-color: rgba(215, 216, 217, 0.3);
+}
+
+.pricing .tab-pane .card-header h1 {
+  font-size: 2.7rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.pricing .tab-pane .card-header h1 span {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #b0b1b3;
+}
+
+.pricing .tab-pane .card-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.pricing .tab-pane .card-header p {
+  color: #b0b1b3;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.pricing .tab-pane .card-body p {
+  color: #b0b1b3;
+  font-size: 0.74rem;
+}
+
+.pricing .tab-pane .card-body .btn-prime {
+  font-size: 0.7rem;
+}
+
+.pricing .tab-pane .card-body .card-link {
+  margin: 10px 0 0;
+  display: block;
+  color: #2500f9;
+  font-weight: 600;
+  font-size: 0.7rem;
 }
 
 .nav-pills .nav-link {
@@ -1305,7 +1370,7 @@ a:hover {
 .footer-bottom {
   margin: 0;
   padding: 50px 0;
-  min-height: 60vh;
+  min-height: 50vh;
   width: 100%;
   position: absolute;
   background-color: #09142e;
@@ -1429,13 +1494,14 @@ a:hover {
 }
 
 .footer-bottom-content p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: 1px;
   color: #b0b1b3;
 }
 
 .footer-bottom-content p a {
   color: #fcae61;
+  font-size: 0.75rem;
   text-decoration: none;
 }
 

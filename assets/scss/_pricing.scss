@@ -1,7 +1,9 @@
 .pricing {
   min-height: 100vh;
-  padding: 50px 0;
-
+  padding: 50px 0 30px;
+  @include tablet {
+    padding: 30px 0;
+  }
   &-title {
     padding: 0 300px;
     text-align: center;
@@ -24,7 +26,7 @@
     &-pills {
       justify-content: center;
       //   background-color: pink;
-      width: 190px;
+      width: 195px;
       padding: 3px 0;
       margin: 0 auto;
       border-radius: 50px;
@@ -36,13 +38,60 @@
     }
   }
   .tab-pane {
+    padding: 20px 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: pink;
+    display: none;
+    &.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .card {
-      width: 250px;
+      border-radius: 6px;
+      min-width: 220px;
+      height: 400px;
+      margin: 10px 0;
+      text-align: center;
+      &-header {
+        border: none;
+        background-color: rgba($grey-1, 0.3);
+        h1 {
+          font-size: size(xxl) - 0.5rem;
+          line-height: 1.6;
+          font-weight: 700;
+          span {
+            font-weight: 400;
+            font-size: size(sm) - 0.15rem;
+            color: $grey-2;
+          }
+        }
+        h2 {
+          font-size: size(sm);
+          font-weight: 600;
+          margin: 0;
+        }
+        p {
+          color: $grey-2;
+          font-size: size(xs) - 0.15rem;
+          font-weight: 500;
+        }
+      }
+      &-body {
+        p {
+          color: $grey-2;
+          font-size: size(xs) - 0.11rem;
+        }
+        .btn-prime {
+          font-size: size(sm) - 0.3rem;
+        }
+        .card-link {
+          margin: 10px 0 0;
+          display: block;
+          color: $blue;
+          font-weight: 600;
+          font-size: size(xs) - 0.15rem;
+        }
+      }
     }
   }
 }

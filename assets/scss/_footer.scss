@@ -54,7 +54,7 @@
   &-bottom {
     margin: 0;
     padding: 50px 0;
-    min-height: 60vh;
+    min-height: 50vh;
     width: 100%;
     position: absolute;
     background-color: $footer-color;
@@ -133,11 +133,12 @@
         }
       }
       p {
-        font-size: size(xs);
+        font-size: size(xs) - 0.1rem;
         letter-spacing: 1px;
         color: $grey-2;
         a {
           color: $orange;
+          font-size: size(xs) - 0.1rem;
           text-decoration: none;
           &:hover {
             color: $orange;
