@@ -140,12 +140,18 @@ a:hover {
 }
 
 .navbar-brand {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   font-weight: 700;
 }
 
 .navbar-brand span {
   color: #fcae61;
+}
+
+@media screen and (max-width: 426px) {
+  .navbar-brand {
+    font-size: 1.7rem;
+  }
 }
 
 .navbar-toggler {
@@ -154,7 +160,7 @@ a:hover {
 
 .navbar-toggler span {
   color: #000;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .nav-item {
@@ -168,7 +174,7 @@ a:hover {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 50rem;
   width: 100%;
   position: relative;
   display: -webkit-box;
@@ -180,6 +186,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 426px) {
+  .hero {
+    min-height: 100vh;
+  }
 }
 
 .hero-bg {
@@ -267,7 +279,7 @@ a:hover {
 }
 
 .hero-wrapper .content {
-  padding-top: 80px;
+  padding-top: 3rem;
 }
 
 .hero-wrapper .content-left {
@@ -328,7 +340,7 @@ a:hover {
 
 @media screen and (max-width: 769px) {
   .hero-wrapper .content-left .main-badge p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -412,7 +424,7 @@ a:hover {
 }
 
 .company {
-  min-height: 50vh;
+  min-height: 25rem;
   width: 100%;
   padding: 80px 0px 50px;
   overflow-x: hidden;
@@ -461,7 +473,7 @@ a:hover {
 }
 
 .features {
-  min-height: 50vh;
+  min-height: 40rem;
   width: 100%;
 }
 
@@ -551,7 +563,7 @@ a:hover {
 }
 
 .design {
-  min-height: 50vh;
+  min-height: 40rem;
 }
 
 .design-image {
@@ -627,7 +639,7 @@ a:hover {
 }
 
 .app {
-  min-height: 100vh;
+  min-height: 50rem;
   width: 100%;
   padding: 50px 10px;
 }
@@ -735,7 +747,7 @@ a:hover {
 }
 
 .ultimate {
-  min-height: 100vh;
+  min-height: 50rem;
   width: 100%;
 }
 
@@ -868,7 +880,7 @@ a:hover {
 }
 
 .pricing {
-  min-height: 100vh;
+  min-height: 50rem;
   padding: 50px 0 30px;
 }
 
@@ -1001,7 +1013,7 @@ a:hover {
 }
 
 .client {
-  min-height: 50vh;
+  min-height: 50rem;
   padding: 30px 0;
 }
 
@@ -1138,7 +1150,7 @@ a:hover {
 
 @media screen and (max-width: 426px) {
   .client .swiper-button-prev, .client .swiper-button-next {
-    bottom: 0;
+    bottom: -1px;
   }
 }
 
@@ -1176,7 +1188,7 @@ a:hover {
 }
 
 .questions {
-  min-height: 90vh;
+  min-height: 50rem;
   padding: 50px 0;
 }
 
@@ -1370,7 +1382,7 @@ a:hover {
 .footer-bottom {
   margin: 0;
   padding: 50px 0;
-  min-height: 50vh;
+  min-height: 30rem;
   width: 100%;
   position: absolute;
   background-color: #09142e;
